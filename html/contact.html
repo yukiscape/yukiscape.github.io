@@ -53,22 +53,35 @@
          <div class="hero" style="background:#18191d;">
             <div class="hero d-flex justify-content-center align-items-center" style="background:#18191d;">
                 <div class="d-flex align-items-center flex-wrap justify-content-center">
-                  <img src="/images/hero-section-mainpicture.png" class="main-picture align-self-start">
-                  <div class="text-center text-md-left">
-                    <h3 style="font-size: 5vw;" class='text-white'>AMARTYA</h3>
-                    <h4 style="font-size: 3vw;" class='text-white'>GARIKAPATI</h4>   
-                    <p>
-                        <i>
-                            18y.o design student, with a keen interest in photography<br>
-                            and enjoys listening to indie-pop!
-                        </i>     
-                    </p>
-                    <button onclick="window.location.href='https://www.behance.net/amartya_garikapati';" class="button" style="margin-top: 10px; border-radius: 40px;"><b>BEHANCE</b></button> 
-                    <button onclick="window.location.href='https://www.instagram.com/yukiscape/';" class="button" style="margin-top: 10px; border-radius: 40px; margin-left:20px;"><b>INSTAGRAM</b></button>
-                    <button onclick="window.location.href='https://twitter.com/yukiscape';" class="button" style="margin-top: 10px; border-radius: 40px; margin-left:20px;"><b>TWITTER</b></button>           
+                    <form style="padding-bottom:50px;" id="contact-form">      
+                      <input name="name" type="text" class="feedback-input" placeholder="Name"/>   
+                      <input name="email" type="email" class="feedback-input email" placeholder="Email"/>
+                      <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+ 
+ <p class='input-error'></p>
+                      <button type="submit" >Submit</button>
+                    </form>
                 </div>
               </div>
          </div>
      </div>
     </body>
+    <script>
+      const contactForm = document.querySelector('#contact-form');
+const inputError = document.querySelector('.input-error');
+const emailInput = document.querySelector('.email');
+
+emailInput.addEventListener('keyup', () => {
+   inputError.innerText = ''
+})
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();  
+if(/^\S+@\S+\.\S+$/.test(emailInput.value)){
+  return
+}else {
+  inputError.innerText = 'Please enter email in a valid format'
+}
+})
+    </script>
 </html>
