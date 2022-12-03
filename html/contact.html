@@ -55,7 +55,7 @@
                 <div class="d-flex align-items-center flex-wrap justify-content-center">
                     <form style="padding-bottom:50px;" id="contact-form">      
                       <input name="name" type="text" class="feedback-input" placeholder="Name"/>   
-                      <input name="email" type="email" class="feedback-input email" placeholder="Email"/>
+                      <input name="email" type="text" class="feedback-input email" placeholder="Email"/>
                       <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
  
  <p class='input-error'></p>
@@ -67,7 +67,7 @@
      </div>
     </body>
     <script>
-      const contactForm = document.querySelector('#contact-form');
+const contactForm = document.querySelector('#contact-form');
 const inputError = document.querySelector('.input-error');
 const emailInput = document.querySelector('.email');
 
@@ -82,6 +82,8 @@ if(/^\S+@\S+\.\S+$/.test(emailInput.value)){
 }else {
   inputError.innerText = 'Please enter email in a valid format'
 }
+
+contactForm.reset()
 })
     </script>
 </html>
