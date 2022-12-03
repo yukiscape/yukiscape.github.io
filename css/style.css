@@ -159,3 +159,9 @@ textarea {
 img {
   max-width:100%;
 }
+
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
