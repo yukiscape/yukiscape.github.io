@@ -50,43 +50,19 @@
             </div>
         </div>
  </div>
-         <div class="hero" style="background:#18191d;">
-            <div class="hero d-flex justify-content-center align-items-center" style="background:#18191d;">
-                <div class="d-flex align-items-center flex-wrap justify-content-center">
-                    <form onsubmit="return validate()" action="submitted.html">
-                      <input name="name" type="text" class="feedback-input" placeholder="Name" required/>   
-                      <input name="email" type="email" class="feedback-input email" placeholder="Email" required/>
-                      <textarea name="text" class="feedback-input" placeholder="Comment" required></textarea>
-                      <button onclick="validate()" type="submit"> SUBMIT </button>
-              </form>
-                </div>
-              </div>
-         </div>
-     </div>
-    </body>
-    <script>
-const contactForm = document.querySelector('#contact-form');
-const inputError = document.querySelector('.input-error');
-const emailInput = document.querySelector('.email');
-
-emailInput.addEventListener('keyup', () => {
-   inputError.innerText = ''
-})
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();  
-if(/^\S+@\S+\.\S+$/.test(emailInput.value)){
-  return
-}else {
-  inputError.innerText = 'Please enter email in a valid format'
-}
-
-contactForm.reset()
-})
-    </script>
-                 <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50" style="background-color:#18191d;">
-                  <div class="container text-center">
-                    <small>Copyright &copy; yukiscape</small>
-                  </div>
-                </footer>
-</html>
+ <div class="hero" style="background:#18191d;">
+    <div class="hero d-flex justify-content-center align-items-center" style="background:#18191d;">
+        <div class="d-flex align-items-center flex-wrap justify-content-center">
+         
+          <div class="text-center text-md-left">
+            <h3 style="font-size: 5vw;" class='text-white'>Your Form Has Been <br>Submitted!</h3>
+           </div>
+      </div>
+ </div>
+</div>
+<footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50" style="background-color:#18191d;">
+<div class="container text-center">
+<small>Copyright &copy; yukiscape</small>
+</div>
+</footer>
+</body>
